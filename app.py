@@ -97,7 +97,8 @@ y = df.iloc[:, -1].values
 le = LabelEncoder()
 X[:, 2] = le.fit_transform(X[:, 2])
 
-ct = ColumnTransformer(transformers=[('encoder', OneHotEncoder(), [1])], remainder='passthrough')
+ct = ColumnTransformer(transformers=[('encoder', OneHotEncoder(handle_unknown='ignore'), [1])], remainder='passthrough')
+
 X = np.array(ct.fit_transform(X))
 
 sc = StandardScaler()
