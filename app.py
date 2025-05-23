@@ -111,7 +111,7 @@ model = MLPClassifier(hidden_layer_sizes=(6, 6, 5, 4), max_iter=300, random_stat
 model.fit(X_train, y_train)
 
 # Streamlit app
-st.title("Churn Prediction App")
+st.title("Customer Defection Modeling App")
 
 st.sidebar.header("Input Features")
 credit_score = st.sidebar.number_input("Credit Score", min_value=0)
